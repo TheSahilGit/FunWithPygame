@@ -1,3 +1,9 @@
+'''Code for dynamically drawing different shapes with their parmetric equations(using pygame).
+'''
+
+### Sahil Islam ###
+### 02/06/2020 ###
+
 import pygame
 import numpy as np
 

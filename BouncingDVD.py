@@ -11,7 +11,7 @@ imageWidth = 221
 imageHeight = 106
 screen = pygame.display.set_mode((displayWidth, displayHeight))
 pygame.display.set_caption("DVD")
-dvdImage = pygame.image.load('DVD.jpg')
+dvdImage = pygame.image.load('DVD.jpg')         # This file is in the same repasitory. Should download that too.
 screen.fill(black)
 clock = pygame.time.Clock()
 

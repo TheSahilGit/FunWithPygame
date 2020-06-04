@@ -18,6 +18,8 @@ display_height = 650
 
 black = [0, 0, 0]
 white = [255, 255, 255]
+green = [0, 255, 0]
+red = [255, 0, 0]
 
 screen = pygame.display.set_mode((display_width, display_height))
 clock = pygame.time.Clock()
@@ -30,6 +32,14 @@ def slash(x, y, h):
 
 def backslash(x, y, h):
     pygame.draw.line(screen, white, [x, y], [x + h, y + h])
+
+
+def squre(x, y, h, color):
+    pygame.draw.rect(screen, color, [x, y, x + h, y + h])
+
+
+def circle(x, y, h, color):
+    pygame.draw.circle(screen, color, [int(x), int(y)], h)
 
 
 x = 0
@@ -45,8 +55,12 @@ while not game_exit:
 
     if random.random() < 0.5:
         slash(x, y, h)
+        #squre(x, y, h, white)
+        # circle(x, y, h, white)
     else:
         backslash(x, y, h)
+        #squre(x, y, h, black)
+        # circle(x, y, h, black)
     x += h
     if x > display_width or x + h > display_width:
         x = 0
